@@ -1,39 +1,7 @@
 <html>
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script type="text/javascript">
-var names = ["patientname","DOB","patientaddress","patientphone","name",
-"street","citytown","state","zipcode","timeperiod","releaseto","obtainfrom",
-"purpose","EDR","OPR","LXR","CR","A","DS","EMR","other","DI","CCD","consentto",
-"refuse","parent","relationship"];
-var emaildivdata = "Send to Email: <input id=\"email\" type=\"text\" name=\"email\">";
-
-function submit(){
-	
-	var data = [];
-	 for(i=0;i<names.length;i++){
-	 	data[i] = (document.getElementById(names[i]).value);
-	 }
-	 console.log(data);
-	 postdata(data);
-}
-function change(){
-	var DI = document.getElementById('DI').checked;
-	var CCD = document.getElementById('CCD').checked;
-	console.log(DI);
-	console.log(CCD);
-	if (DI == true | CCD == true){
-		document.getElementById('emaildiv').innerHTML = emaildivdata;
-		names[names.length] = "email";
-	}
-	else{
-		document.getElementById('emaildiv').innerHTML = "";
-		var id = names.indexOf("email");
-		if (id > -1){
-			names = names.splice(id,1);
-		}
-	}
-}</script>
+<script type="text/javascript" src="script.js"></script>
 </head>
 <body>
 <div id="textfields">

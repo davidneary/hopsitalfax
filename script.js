@@ -31,7 +31,7 @@ function change(){
 	}
 		
 }
-
+/*
 function postdata(data){
 	$.ajax(
 		{
@@ -43,6 +43,7 @@ function postdata(data){
    			}
 	});
 }
+*/
 /*
 	var patientname = document.getElementById('patientname').value;
 	var DOB = document.getElementById('DOB').value;
