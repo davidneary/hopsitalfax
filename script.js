@@ -10,6 +10,8 @@ function submit(){
 	 for(i=0;i<names.length;i++){
 	 	data[i] = (document.getElementById(names[i]).value);
 	 }
+	 console.log(data);
+	 postdata(data);
 }
 function change(){
 	var DI = document.getElementById('DI').checked;
@@ -28,6 +30,18 @@ function change(){
 		}
 	}
 		
+}
+
+function postdata(data){
+	$.ajax(
+		{
+			type:"POST",
+			url: "/test.py",
+   			data: data,
+   			success: function(response){
+       			alert(response);
+   			}
+	});
 }
 /*
 	var patientname = document.getElementById('patientname').value;
