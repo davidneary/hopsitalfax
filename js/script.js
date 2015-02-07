@@ -1,7 +1,8 @@
 var names = ["patientname","DOB","patientaddress","patientphone","name",
 "street","citytown","state","zipcode","timeperiod","releaseto","obtainfrom",
-"purpose","EDR","OPR","LXR","CR","A","DS","EMR","other","DI","CCD","email","consentto",
+"purpose","EDR","OPR","LXR","CR","A","DS","EMR","other","DI","CCD","consentto",
 "refuse","parent","relationship"];
+var emaildivdata = "Send to Email: <input id=\"email\" type=\"text\" name=\"email\">";
 
 function submit(){
 	
@@ -10,7 +11,24 @@ function submit(){
 	 	data[i] = (document.getElementById(names[i]).value);
 	 }
 }
-
+function change(){
+	var DI = document.getElementById('DI').checked;
+	var CCD = document.getElementById('CCD').checked;
+	console.log(DI);
+	console.log(CCD);
+	if (DI == true | CCD == true){
+		document.getElementById('emaildiv').innerHTML = emaildivdata;
+		names[names.length] = "email";
+	}
+	else{
+		document.getElementById('emaildiv').innerHTML = "";
+		var id = names.indexOf("email");
+		if (id > -1){
+			names = names.splice(id,1);
+		}
+	}
+		
+}
 /*
 	var patientname = document.getElementById('patientname').value;
 	var DOB = document.getElementById('DOB').value;

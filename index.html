@@ -94,13 +94,12 @@
 	Other: 
 	<input id="other" type="textbox" name="other">
 	<br>
-	<input id="DI" type="checkbox" name="DI"><span>Discharge Instructions</span>
-	<input id="CCD" type="checkbox" name="CCD"><span>Cont. of Care Document (CCD)</span>
-	<br>Email: 
-	<input id="email" type="text" name="email">
+	<input id="DI" type="checkbox" name="DI" onchange="change();"><span>Discharge Instructions</span>
+	<input id="CCD" type="checkbox" name="CCD" onchange="change();"><span>Cont. of Care Document (CCD)</span>
+	<br><div id="emaildiv"></div>
 	<br>Please check one: I hereby
-	<input name="consentto" type="radio" id="consentto" value="0"><span>Consent to</span>
-	<input class="refuse" type="radio" id="refuse" value="0"><span>Refuse</span>
+	<input name="consentrefuse" type="radio" id="consentto" value="0"><span>Consent to</span>
+	<input name="consentrefuse" type="radio" id="refuse" value="0"><span>Refuse</span>
 	<br> the release of confidential information concerning: mental health, alcohol and/or drug use, sexual abuse, venereal disease, AIDS or HIV test results.
 	<br>
 	Name of Parent or Legally Appointed Representative (if applicable): 
