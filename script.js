@@ -31,6 +31,18 @@ function change(){
 	}
 		
 }
+function postdata(data){
+	$.ajax({
+		type: "POST",
+		contentType: "application/json; charset=utf-8",
+		url: "flask_app.py",
+		data: data,
+		success: function(data){
+			console.log(data);
+		}
+		dataType: "json"
+	});
+}
 /*
 function postdata(data){
 	$.ajax(
