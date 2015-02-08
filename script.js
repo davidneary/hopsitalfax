@@ -39,7 +39,7 @@ function postdata(data){
 		data: data,
 		success: function(data){
 			console.log(data);
-		}
+		},
 		dataType: "json"
 	});
 }
