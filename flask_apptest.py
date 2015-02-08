@@ -3,7 +3,7 @@
 
 from flask import Flask, request
 from flask import Markup
-import json
+
 app = Flask(__name__)
 
 @app.route('/')
@@ -13,7 +13,6 @@ def hello_world():
 
 @app.route('/', methods=['POST', 'GET'])
 def getdata():
-    import pdb; pdb.set_trace()
     if request.method == 'POST':
         data = request.json
         print data
