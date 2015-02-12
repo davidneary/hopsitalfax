@@ -1,19 +1,20 @@
 var names = ["patientname","DOB","patientaddress","patientphone","name",
 "street","citytown","state","zipcode","timeperiod","releaseto","obtainfrom",
-"purpose","EDR","OPR","LXR","CR","A","DS","EMR","other","DI","CCD","consentto",
+"purpose","consentto",
 "refuse","parent","relationship"];
 var emaildivdata = "Send to Email: <input id=\"email\" type=\"text\" name=\"email\">";
 var json = {};
+var bool;
+var checkboxes = ["EDR","OPR","LXR","CR","A","DS","EMR","DI","CCD"];
+var indexes 
 function submit(){
 	
-	var data = [];
+	var data = {};
 	 for(i=0;i<names.length;i++){
-	 	data[i] = (document.getElementById(names[i]).value);
+	 	data[names[i]] = (document.getElementById(names[i]).value);
 	 }
-
-	for (i=0;i<data.length;i++){
-		jsonproperty = names[i];
-		json[jsonproperty] = data[i];
+	for (i=0;i<checkboxes.length;i++){
+		data[checkboxes[i]] = document.getElementById(checkboxes[i]).checked;
 	}
 	console.log(data);
 	postdata(data);

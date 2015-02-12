@@ -1,0 +1,35 @@
+@font-face {
+    font-family: OpenSansLight;
+    src: url(OpenSans-Light.ttf);
+}
+
+textarea {
+    padding: 9px; 
+    
+    outline: 0; 
+    background: #FFFFFF;
+    width: 400px; 
+    max-width: 400px; 
+    line-height: 300px; 
+    } 
+input{
+    line-height: 20px;
+    font-family: Century, sans-serif;
+    font-size: 20px;
+}
+body {
+    font-family:Century;
+    line-height: 250%;
+    float: left;
+    position: relative;
+    color: black;
+    background-color: white;
+    font-size: 20px;
+
+}
+p{
+    font-family: Century,sans-serif;
+}
+#textfields{
+    font-family: OpenSansLight;
+}
